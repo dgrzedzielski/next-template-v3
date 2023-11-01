@@ -41,27 +41,12 @@ module.exports = {
         ],
         pathGroups: [
           {
-            pattern: 'react*',
+            pattern: '{react,@react}**',
             group: 'external',
             position: 'before',
           },
           {
-            pattern: '@react*',
-            group: 'external',
-            position: 'before',
-          },
-          {
-            pattern: 'react',
-            group: 'external',
-            position: 'before',
-          },
-          {
-            pattern: 'next',
-            group: 'external',
-            position: 'before',
-          },
-          {
-            pattern: 'next*',
+            pattern: '{next/,next}**',
             group: 'external',
             position: 'before',
           },

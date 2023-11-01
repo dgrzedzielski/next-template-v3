@@ -14,15 +14,22 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.291.0",
     "next": "14.0.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.2",
     "@storybook/addon-interactions": "^7.5.2",
     "@storybook/addon-links": "^7.5.2",
     "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addon-themes": "^7.5.2",
     "@storybook/blocks": "^7.5.2",
     "@storybook/nextjs": "^7.5.2",
     "@storybook/react": "^7.5.2",
@@ -48,6 +55,7 @@
     "prettier-plugin-tailwindcss": "^0.5.6",
     "storybook": "^7.5.2",
     "tailwindcss": "^3.3.0",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "^5"
   },
   "lint-staged": {
