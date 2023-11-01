@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint --fix --cache '**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "next lint --fix",
     "format": "prettier --write '**/*.{json,css,scss,html,md}'",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
