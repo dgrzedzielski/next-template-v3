@@ -5,6 +5,7 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:prettier/recommended',
+    'plugin:storybook/recommended',
   ],
   plugins: ['unused-imports'],
   rules: {
