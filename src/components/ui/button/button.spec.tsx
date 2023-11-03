@@ -1,6 +1,7 @@
 import { userEvent } from '@storybook/testing-library';
-import { render, screen } from '@testing-library/react';
 import { vi } from 'vitest';
+
+import { render, screen } from '@/lib/test-utils';
 
 import { Button } from './button';
 

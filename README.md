@@ -37,7 +37,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## TODO
 
-- tests integration / unit - better setup with custom render
 - msw - integration with tests and storybook
 - github action workflow for e2e - adjust
 - verify eslint config
