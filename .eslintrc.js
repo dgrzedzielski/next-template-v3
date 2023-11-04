@@ -22,7 +22,7 @@ module.exports = {
     ],
     'react/jsx-curly-brace-presence': [
       'error',
-      { props: 'never', children: 'never', propElementValues: 'never' },
+      { props: 'never', children: 'never', propElementValues: 'always' },
     ],
     'import/order': [
       'error',

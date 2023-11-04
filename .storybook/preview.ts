@@ -20,8 +20,8 @@ export const decorators = [
       light: 'light',
       dark: 'dark',
     },
-    defaultTheme: 'light',
-    attributeName: 'data-mode',
+    defaultTheme: 'dark',
+    attributeName: 'data-theme',
   }),
 ];
 
