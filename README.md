@@ -38,6 +38,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## TODO
 
 - msw - integration with tests and storybook
-- github action workflow for e2e - adjust
-- verify eslint config
-- (optional) fly.io deployment?
