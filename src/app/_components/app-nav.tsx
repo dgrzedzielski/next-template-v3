@@ -4,6 +4,7 @@ import Link, { LinkProps } from 'next/link';
 
 import { auth, UserButton } from '@clerk/nextjs';
 
+import { ThemeSwitcher } from '@/app/_components/theme-switcher';
 import { cn } from '@/styles/utils';
 
 const AppNavLink = ({
@@ -64,7 +65,10 @@ export const AppNav = async () => {
             <AppNavLink href="/dashboard">Dashboard</AppNavLink>
           </li>
         </ul>
-        <AppNavUserSection />
+        <div className="flex items-center gap-8">
+          <AppNavUserSection />
+          <ThemeSwitcher />
+        </div>
       </nav>
     </header>
   );

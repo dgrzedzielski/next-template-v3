@@ -6,6 +6,7 @@ import { cn } from '@/styles/utils';
 
 import { AppNav } from './_components/app-nav';
 import { ClerkProvider } from './_components/clerk-provider';
+import { ThemeProvider } from './_components/theme-provider';
 
 import '../styles/globals.css';
 
@@ -17,15 +18,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html data-theme="dark" lang="en" className="h-full">
-        <body className={cn('h-full font-sans', inter.variable)}>
-          <div className="flex h-full flex-col">
-            <AppNav />
-            {children}
-          </div>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en" className="h-full" suppressHydrationWarning>
+      <body className={cn('h-full font-sans', inter.variable)}>
+        <ThemeProvider>
+          <ClerkProvider>
+            <div className="flex h-full flex-col">
+              <AppNav />
+              {children}
+            </div>
+          </ClerkProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
