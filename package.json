@@ -13,7 +13,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.26.2",
@@ -29,6 +30,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.1",
     "@playwright/test": "^1.39.0",
     "@storybook/addon-essentials": "^7.5.2",
     "@storybook/addon-interactions": "^7.5.2",
