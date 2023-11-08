@@ -72,13 +72,5 @@
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "^5",
     "vitest": "^0.34.6"
-  },
-  "lint-staged": {
-    "**/*.{json,css,scss,html,md}": [
-      "npm run format"
-    ],
-    "**/*.{js,jsx,ts,tsx}": [
-      "npm run lint:fix"
-    ]
   }
 }
