@@ -6,13 +6,35 @@ import { useTheme } from 'next-themes';
 import { ClerkProvider as BaseClerkProvider } from '@clerk/nextjs';
 import { dark } from '@clerk/themes';
 
+import { inputClassNames } from '@/components/ui/input';
 import { darkTheme } from '@/styles/themes/dark';
 import { lightTheme } from '@/styles/themes/light';
 import { Theme } from '@/styles/themes/type';
-import { inputClassNames } from '@/ui/input';
 
-export const ClerkProvider = ({ children }: { children: React.ReactNode }) => {
-  const { resolvedTheme: currentTheme } = useTheme();
+const getPreferredSystemTheme = () => {
+  if (typeof window === 'undefined') return;
+
+  if (
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  ) {
+    return 'dark';
+  }
+
+  return 'light';
+};
+
+interface Props {
+  children: React.ReactNode;
+}
+
+export const ClerkProvider = ({ children }: Props) => {
+  const { resolvedTheme } = useTheme();
+
+  const currentTheme =
+    resolvedTheme === 'system' || !resolvedTheme
+      ? getPreferredSystemTheme()
+      : resolvedTheme;
 
   const theme: Theme = currentTheme === 'dark' ? darkTheme : lightTheme;
 
@@ -31,7 +53,7 @@ export const ClerkProvider = ({ children }: { children: React.ReactNode }) => {
           colorInputText: `hsl(${theme.foreground})`,
         },
         elements: {
-          card: 'bg-card border-border',
+          card: 'bg-card',
           formFieldInput: inputClassNames,
         },
       }}

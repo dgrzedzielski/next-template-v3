@@ -2,11 +2,10 @@ import * as React from 'react';
 
 import { Inter } from 'next/font/google';
 
+import { AppNav } from '@/components/layout/app-nav';
+import { ClerkProvider } from '@/components/providers/clerk-provider';
+import { ThemeProvider } from '@/components/providers/theme-provider';
 import { cn } from '@/styles/utils';
-
-import { AppNav } from './_components/app-nav';
-import { ClerkProvider } from './_components/clerk-provider';
-import { ThemeProvider } from './_components/theme-provider';
 
 import '../styles/globals.css';
 

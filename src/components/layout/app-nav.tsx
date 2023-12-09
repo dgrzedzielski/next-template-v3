@@ -4,7 +4,7 @@ import Link, { LinkProps } from 'next/link';
 
 import { auth, UserButton } from '@clerk/nextjs';
 
-import { ThemeSwitcher } from '@/app/_components/theme-switcher';
+import { ThemeSwitcher } from '@/components/layout/theme-switcher';
 import { cn } from '@/styles/utils';
 
 const AppNavLink = ({
@@ -56,7 +56,7 @@ export const AppNavUserSection = async () => {
 export const AppNav = async () => {
   return (
     <header>
-      <nav className="flex justify-between border-b border-border px-8 py-4">
+      <nav className="flex justify-between border-b px-8 py-4">
         <ul className="flex items-center gap-8">
           <li>
             <AppNavLink href="/">Home</AppNavLink>

@@ -3,7 +3,7 @@ import * as React from 'react';
 import { cn } from '@/styles/utils';
 
 const cardClassName =
-  'rounded-lg border bg-card text-card-foreground shadow-sm border-border';
+  'rounded-lg border bg-card text-card-foreground shadow-sm';
 
 const Card = React.forwardRef<
   HTMLDivElement,
